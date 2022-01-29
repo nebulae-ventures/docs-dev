@@ -20,8 +20,9 @@ Il vous aide à diverses étapes de votre travail telles que :
 De plus Hardhat amène sa propre version modifiée de l'EVM que vous pouvez utiliser lors de vos phases de tests. Cette
 EVM modifiée rajoute :
 - des aides au débogage (stack trace)
-- console.log en Solidity
-et d'autres choses que nous allons explorer tout a long de cette série de tutoriels.
+- console.log
+
+Ainsi que d'autres choses que nous allons explorer tout a long de cette série de tutoriels.
 
 [//]: # (Below are the main talking points I wanna cover in this tuto)
 
@@ -29,6 +30,24 @@ et d'autres choses que nous allons explorer tout a long de cette série de tutor
 
 [//]: # ("Concurrent")
 [//]: # (Forces)
+## Concurrents
+
+Hardhat n'est pas le seul outil dans sa catégorie, vous connaissez peut-être **[Truffle](https://trufflesuite.com/docs/truffle/)**
+qui possède des fonctionnalités assez similaires à Hardhat. Il y a aussi **[Foundry](https://mirror.xyz/sha.eth/6Mn3HjrqKLhHzu2balLPv4SqE5a-oEESl4ycpRkWFsc)**
+qui est un nouveau venu (que je n'ai personnellement pas eu le temps de tester, mais je pense couvrir ça dans un 
+prochain tutoriel).
+
+## Forces
+
+Globalement, Hardhat est plus facile d'utilisation et la possibilité de faire tourner ses tests en utilisant une copie
+de l'état d'une blockchain, à un certain block, est très puissant.
+Hardhat est aussi plus rapide lors de l'exécution des tests que Truffle, cela peut vous faire gagner pas mal de temps.
+À noter que Foundry met en avant le fait qu'il est plus rapide qu'Hardhat sur ce point.
+
+Le système de plugins est très intéressant et permet d'étendre les fonctionnalités d'Hardhat (par exemple il existe un 
+plugin qui calcul le cout de chaque transaction effectué lors de vos tests)
+
+[//]: # (Rajouter lien + autre exemple de plugin ?)
 
 # Hardhat Network
 
