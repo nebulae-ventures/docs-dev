@@ -4,6 +4,12 @@
 
 ## Mainnet
 
+### Lydia
+
+Router : [0xA52aBE4676dbfd04Df42eF7755F01A3c41f28D27](https://snowtrace.io/address/0xA52aBE4676dbfd04Df42eF7755F01A3c41f28D27)  
+Factory : [0xe0c1bb6df4851feeedc3e14bd509feaf428f7655](https://snowtrace.io/address/0xe0c1bb6df4851feeedc3e14bd509feaf428f7655)  
+LYD : [0x4c9b4e1ac6f24cde3660d5e4ef1ebf77c710c084](https://snowtrace.io/address/0x4c9b4e1ac6f24cde3660d5e4ef1ebf77c710c084)
+
 ### Complus
 
 Router : [0x78c18E6BE20df11f1f41b9635F3A18B8AD82dDD1](https://snowtrace.io/address/0x78c18E6BE20df11f1f41b9635F3A18B8AD82dDD1)  
