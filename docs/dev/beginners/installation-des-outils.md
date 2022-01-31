@@ -117,7 +117,7 @@ Résultat : ```Balance : 355259566500540782934```
 
 On notera que la balance renvoyée comprend les 18 décimales de précision de l'AVAX
 
-[Lien vers le script](./Web3-basics.py)
+<!-- [Lien vers le script](./Web3-basics.py) -->
 
   </TabItem>
   <TabItem value="js" label="Javascript">TODO</TabItem>
