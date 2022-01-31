@@ -40,7 +40,7 @@ const config = {
         title: 'Nebulae Ventures Docs',
         logo: {
           alt: 'Nebulae Ventures Logo',
-          src: 'img/logo.png',
+          src: 'img/logo-white.png',
         },
         items: [
           {
