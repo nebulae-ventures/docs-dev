@@ -26,7 +26,8 @@ PNG : [0x60781C2586D68229fde47564546784ab3fACA982](https://snowtrace.io/address/
 
 ### Pangolin
 
-Router : [0x2D99ABD9008Dc933ff5c0CD271B88309593aB921](https://testnet.snowtrace.io/address/0x2D99ABD9008Dc933ff5c0CD271B88309593aB921)
+Router : [0x2D99ABD9008Dc933ff5c0CD271B88309593aB921](https://testnet.snowtrace.io/address/0x2D99ABD9008Dc933ff5c0CD271B88309593aB921)  
+Factory : [0xe4a575550c2b460d2307b82dcd7afe84ad1484dd](https://testnet.snowtrace.io/address/0xe4a575550c2b460d2307b82dcd7afe84ad1484dd)
 
 ## WAGMI
 

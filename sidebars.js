@@ -16,6 +16,10 @@ module.exports = {
               type: 'doc',
               id: 'dev/ressources/contracts',
             },
+            {
+              type: 'doc',
+              id: 'dev/ressources/contractsOld',
+            },
           ]
         },
         {
