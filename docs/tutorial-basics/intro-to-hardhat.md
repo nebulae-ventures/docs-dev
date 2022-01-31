@@ -24,14 +24,14 @@ EVM modifiée rajoute des aides utiles vous permettant de tester plus efficaceme
 
 # Utilité
 
-## Concurrents
+## Alternatives
 
 Hardhat n'est pas le seul outil dans sa catégorie, vous connaissez
 peut-être **[Truffle](https://trufflesuite.com/docs/truffle/)**
 qui possède des fonctionnalités assez semblables.
 
 **[Brownie](https://eth-brownie.readthedocs.io/en/stable/)** est un outil écrit en python qui possède des capacités
-similaires à Truffle.
+similaires à Truffle. Si vous êtes plus à l'aise avec python alors cet outil est probablement un bon choix pour vous.
 
 Il y a aussi **[Foundry](https://mirror.xyz/sha.eth/6Mn3HjrqKLhHzu2balLPv4SqE5a-oEESl4ycpRkWFsc)**
 qui est un nouveau venu (que je n'ai personnellement pas eu le temps de tester, je pense couvrir ça dans un prochain
@@ -40,7 +40,9 @@ grande [rapidité d'exécution des tests](https://www.paradigm.xyz/2021/12/intro
 . Ceci est surement dû au fait que contrairement à hardhat ou truffle, qui sont écrit à l'aide de Javascript, Foundry
 utilise Rust.
 
-Un dernier outil concurrent à Hardhat : [dApp.tools](https://dapp.tools/). Il semble assex complet mais je n'ai pas eu l'occasion de le tester.
+Un dernier outil concurrent à Hardhat : [dApp.tools](https://dapp.tools/). Il semble assez complet, mais je n'ai pas eu l'occasion de le tester.
+
+On fera peut-être une série d'articles allant plus en profondeur sur ces outils dans le futur.
 
 [//]: # (Others ?)
 
