@@ -44,7 +44,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://nebulaventures.com',
+            href: 'http://nebulae.ventures/',
             label: 'Nebulae Ventures',
             position: 'right',
           },
@@ -58,7 +58,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/home',
               },
             ],
           },
@@ -66,16 +66,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/NebulaeVentures',
+              },
+              {
+                label: 'Newsletter',
+                to: 'https://nebulae.substack.com/',
               },
             ],
           },
@@ -83,12 +79,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label : 'Linkedin',
+                to: 'https://www.linkedin.com/company/nebul%C3%A6/'
               },
             ],
           },
