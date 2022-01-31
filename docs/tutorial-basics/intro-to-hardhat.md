@@ -18,11 +18,7 @@ Il vous aide à diverses étapes de votre travail telles que :
 - le débogage de votre smart contract
 
 De plus Hardhat amène sa propre version modifiée de l'EVM que vous pouvez utiliser lors de vos phases de tests. Cette
-EVM modifiée rajoute :
-- des aides au débogage (stack trace)
-- console.log
-
-Ainsi que d'autres choses que nous allons explorer tout a long de cette série de tutoriels.
+EVM modifiée rajoute des aides utiles vous permettant de tester plus efficacement votre code.
 
 [//]: # (Below are the main talking points I wanna cover in this tuto)
 
@@ -33,9 +29,10 @@ Ainsi que d'autres choses que nous allons explorer tout a long de cette série d
 ## Concurrents
 
 Hardhat n'est pas le seul outil dans sa catégorie, vous connaissez peut-être **[Truffle](https://trufflesuite.com/docs/truffle/)**
-qui possède des fonctionnalités assez similaires.
+qui possède des fonctionnalités assez semblables.
 
-**[Brownie](https://eth-brownie.readthedocs.io/en/stable/)** 
+**[Brownie](https://eth-brownie.readthedocs.io/en/stable/)** est un outil écrit en python qui possède des capacités 
+similaires à Truffle.
 
 Il y a aussi **[Foundry](https://mirror.xyz/sha.eth/6Mn3HjrqKLhHzu2balLPv4SqE5a-oEESl4ycpRkWFsc)**
 qui est un nouveau venu (que je n'ai personnellement pas eu le temps de tester, je pense couvrir ça dans un 
@@ -71,7 +68,66 @@ un réseau destiné aux tests).
 
 # Hardhat Runner
 
+C'est le CLI qui vous permettra d'interagir avec Hardat. Hardhat est orienté autours de tasks, chaque commande que vous 
+lancerez sera en fait une task.
+
+Voici un example de commande:
+
+`npx hardhat test`
+
+Et voici une liste des différentes tasks par 'default' : 
+
+```shell
+$ npx hardhat
+Hardhat version 2.0.8
+
+Usage: hardhat [GLOBAL OPTIONS] <TASK> [TASK OPTIONS]
+
+GLOBAL OPTIONS:
+
+  --config              A Hardhat config file.
+  --emoji               Use emoji in messages.
+  --help                Shows this message, or a task's help if its name is provided
+  --max-memory          The maximum amount of memory that Hardhat can use.
+  --network             The network to connect to.
+  --show-stack-traces   Show stack traces.
+  --tsconfig            A TypeScript config file.
+  --verbose             Enables Hardhat verbose logging
+  --version             Shows hardhat's version.
+
+
+AVAILABLE TASKS:
+
+  accounts      Prints the list of accounts
+  check         Check whatever you need
+  clean         Clears the cache and deletes all artifacts
+  compile       Compiles the entire project, building all artifacts
+  console       Opens a hardhat console
+  flatten       Flattens and prints contracts and their dependencies
+  help          Prints this message
+  node          Starts a JSON-RPC server on top of Hardhat Network
+  run           Runs a user-defined script after compiling the project
+  test          Runs mocha tests
+
+To get help for a specific task run: npx hardhat help [task]
+```
+
 # Tasks / Scripts
+
+Dans la section précédente nous avons vu qu'avec le CLI on peut lancer l'exécution de tasks. Celles-ci peuvent être celles par défaut d'hardhat
+telles que `test` , `compile` mais aussi des tasks que vous aurez défini vous-même.
+
+Ces tasks personalisés sont à définir dans le dossier /scripts en Typescript (je vous encourage vraiment à prendre le temps de setup Hardhat
+avec Typescript et de ne pas utiliser Javascript, bref c'est un autre débat). Elles pourront ensuit etre execute via la commande
+`npx hardhat run nomdelacommande`.  Cela peut etre tres utile pour effectuer des taches recurrente. Par exemple dans un de mes projets j;utilise 
+ce workflow :
+
+- creation d'un reseau hardhat network, base sur l'etat de la cchain d'avalanche a un block precis.
+- execution d'une task qui va envoyer des transactions a un smart contract specifique deja dpeloye sur la CChain, permettant ainsi de creer un
+environnement de test controle
+- test de mon application, se connectant au reseau hardhat
+
+[//]: # (Need to make above points more clearer)
 
 # Plugins
 
