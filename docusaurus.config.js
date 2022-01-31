@@ -60,6 +60,10 @@ const config = {
                 label: 'Tutorial',
                 to: '/home',
               },
+              {
+                label: 'Feedback',
+                href: 'https://rr5o0aphsnu.typeform.com/to/YP5kYdBX'
+              },
             ],
           },
           {
