@@ -26,4 +26,4 @@ Vous trouverez ici des articles qui expliquent en détails des concepts tel que 
 
 ## Améliorations
 
-Si vous trouvez qu'il manque des sections / tutos ou que vous avez une remarque quelconque sur comment améliorer cette documentation n'hésitez pas à faire un retour [**ici**](!https://rr5o0aphsnu.typeform.com/to/YP5kYdBX)
+Si vous trouvez qu'il manque des sections / tutos ou que vous avez une remarque quelconque sur comment améliorer cette documentation n'hésitez pas à faire un retour [**ici**](https://rr5o0aphsnu.typeform.com/to/YP5kYdBX)
