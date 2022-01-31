@@ -4,13 +4,12 @@ sidebar_position: 6
 
 # Introduction
 
-Dans ce tutorial nous allons introduire **[Hardhat](https://hardhat.org/)** et passer en revue ses principales
-fonctionnalités. Elles feront toutes l'objet d'un article plus détaillé (avec des bouts de code) dans le futur.
+Dans ce tutoriel, nous allons introduire **[Hardhat](https://hardhat.org/)** et passer en revue ses principales
+fonctionnalités. Elles feront l'objet d'un article plus détaillé (avec des bouts de code) dans le futur.
 
 # Hardhat ?
 
-[//]: # (Par qui ?)
-Hardhat est un environment de développement pour les **dApp** tournant sur
+Crée par [Nomic Labs](https://nomiclabs.io/), Hardhat est un environment de développement pour les **dApp** tournant sur
 une **[EVM](https://ethereum.org/fr/developers/docs/evm/#top)**. Il vous aide à diverses étapes de votre travail telles
 que :
 
@@ -23,13 +22,7 @@ que :
 De plus Hardhat amène sa propre version modifiée de l'EVM que vous pouvez utiliser lors de vos phases de tests. Cette
 EVM modifiée rajoute des aides utiles vous permettant de tester plus efficacement votre code.
 
-[//]: # (Below are the main talking points I wanna cover in this tuto)
-
 # Utilité
-
-[//]: # ("Concurrent")
-
-[//]: # (Forces)
 
 ## Concurrents
 
@@ -47,14 +40,16 @@ grande [rapidité d'exécution des tests](https://www.paradigm.xyz/2021/12/intro
 . Ceci est surement dû au fait que contrairement à hardhat ou truffle, qui sont écrit à l'aide de Javascript, Foundry
 utilise Rust.
 
+Un dernier outil concurrent à Hardhat : [dApp.tools](https://dapp.tools/). Il semble assex complet mais je n'ai pas eu l'occasion de le tester.
+
 [//]: # (Others ?)
 
 ## Forces
 
 Globalement, Hardhat est plus facile d'utilisation et la possibilité de faire tourner ses tests en utilisant une copie
-de l'état d'une blockchain, à un certain block, est très puissante. Hardhat est aussi plus rapide lors de l'exécution des
-tests que Truffle, cela peut vous faire gagner pas mal de temps. À noter que Foundry met en avant le fait qu'il est plus
-rapide qu'Hardhat sur ce point.
+de l'état d'une blockchain, à un certain block, est très puissante. Hardhat est aussi plus rapide lors de l'exécution
+des tests que Truffle, cela peut vous faire gagner pas mal de temps. À noter que Foundry met en avant le fait qu'il est
+plus rapide qu'Hardhat sur ce point.
 
 Le système de plugins est très intéressant et permet d'étendre les fonctionnalités d'Hardhat. Par exemple, il existe un
 plugin qui calcul le cout de chaque transaction effectué lors de vos tests. Un autre vous permettra d'automatiquement
@@ -70,11 +65,12 @@ code Solidity.
 # Hardhat Network
 
 Une des forces d'Hardhat est qu'il est livré avec **Hardhat Network**, une version légèrement modifiée de l'EVM. Cette
-version incorpore des changements destinés à faciliter la vie des développeurs web3. En rajoutant par exemple des messages d'erreurs
-plus clairs lors de problèmes à l'exécution de votre transaction. Allant même jusqu'à rajouter une stacktrace vous montrant
-précisement ou celle-ci a rencontré un probleme.
+version incorpore des changements destinés à faciliter la vie des développeurs web3. En rajoutant par exemple des
+messages d'erreurs plus clairs lors de problèmes à l'exécution de votre transaction. Allant même jusqu'à rajouter une
+stacktrace vous montrant précisement ou celle-ci a rencontré un probleme.
 
-Voici un exemple de stack trace venant de la -au passage tres bonne- [documentation](https://hardhat.org/hardhat-network/) d'Hardhat.
+Voici un exemple de stack trace venant de la -au passage tres
+bonne- [documentation](https://hardhat.org/hardhat-network/) d'Hardhat.
 
 ```shell
 Error: Transaction reverted: function selector was not recognized and there's no fallback function
@@ -87,8 +83,9 @@ Error: Transaction reverted: function selector was not recognized and there's no
   at Context.<anonymous> (test/token/ERC721/ERC721.behavior.js:321:26)
 ```
 
-Un autre rajout à mon sens essentiel est celui du `console.log` dans le code Solidity. Vous donnant la possibilité d'avoir un
-aperçu de ce qui se passe dans votre code, vous aidant ainsi fortement dans votre processus de dévelopement et de test.
+Un autre rajout à mon sens essentiel est celui du `console.log` dans le code Solidity. Vous donnant la possibilité
+d'avoir un aperçu de ce qui se passe dans votre code, vous aidant ainsi fortement dans votre processus de dévelopement
+et de test.
 
 Lorsque vous lancez vos tests/scripts/tâches via Hardhat sans préciser quel réseau utiliser, il va par défaut démarrer
 un **Hardhat Network Node** en tant que process le temps d'exécuter ce que vous lui avez demandé de faire.
@@ -97,10 +94,8 @@ Il est aussi possible de démarrer **Hardhat Network Node** via votre terminal e
 applications telles que Metamask, un bot que vous développez ou n'importe quelle dApp (bien sûr le réseau en découlant
 sera un réseau destiné aux tests).
 
-Il est intéressant de noter que par défaut ce réseau va miner un nouveau block à chaque transaction que vous allez effectuer
-dans vos tests.
-
-
+Il est intéressant de noter que par défaut ce réseau va miner un nouveau block à chaque transaction que vous allez
+effectuer dans vos tests.
 
 # Hardhat Runner
 
