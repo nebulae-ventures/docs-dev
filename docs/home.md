@@ -2,34 +2,28 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Bienvenue sur la documentation de Nebulae !
 
-## Getting Started
+Ici vous trouverez des ressources pour apprendre à dev sur Avalanche que vous soyez complètement débutant dans le domaine ou que vous ayez déjà de l'expérience de dev.  
+Le site est réparti en sections :
 
-Get started by **creating a new site**.
+- Tutoriels
+- Articles / Explications de concepts
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Tutoriels
 
-## Generate a new site
+Vous trouverez ici des tutos répartis par niveau de connaissance / difficulté ou par domaine :
 
-Generate a new Docusaurus site using the **classic template**:
+- Débutant
+- Expert
+- Smart contracts
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+## Articles
 
-## Start your site
+Vous trouverez ici des articles qui expliquent en détails des concepts tel que les subnets, l'EVM, la MEV et bien d'autres encore.
 
-Run the development server:
+## Améliorations
 
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+Si vous trouvez qu'il manque des sections / tutos ou que vous avez une remarque quelconque sur comment améliorer cette documentation n'hésitez pas à faire un retour [**ici**](https://rr5o0aphsnu.typeform.com/to/YP5kYdBX)

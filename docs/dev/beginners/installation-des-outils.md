@@ -14,19 +14,19 @@ Afin de pouvoir dévlopper sur Avalanche voici une liste des outils très utiles
 Pour pouvoir coder n'importe quel éditeur de texte peut convenir mais certains possèdent des outils qui facilitent grandement la vie tel que [Visual Studio Code](https://code.visualstudio.com/)
 
 Après avoir choisi la version correspondante à votre système d'exploitation
-![Télécharge VSCode](./VSCodeInstall.png)
+![Télécharge VSCode](/img/dev/beginners/VSCodeInstall.png)
 
 <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
 
-![Installer VSCode](./VSCodeInstallWindows.png)
+![Installer VSCode](/img/dev/beginners/VSCodeInstallWindows.png)
 
   </TabItem>
   <TabItem value="debian" label="Linux">
 
 Il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo dpkg -i path/to/file```  
 *(ou d'exécuter cette commande en root si pas sous Ubuntu)*
-![Installer VSCode](./VSCodeInstallDebian.png)
+![Installer VSCode](/img/dev/beginners/VSCodeInstallDebian.png)
 
   </TabItem>
 </Tabs>
@@ -37,7 +37,7 @@ Il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo dpkg -i 
   <TabItem value="win" label="Windows">
 
 Taper "Python" dans le Microsoft Store et installer la meilleure version disponible *(ici 3.9)*
-![Installer VSCode](./PythonInstallWindows.png)
+![Installer VSCode](/img/dev/beginners/PythonInstallWindows.png)
 
   </TabItem>
   <TabItem value="debian" label="Linux">
@@ -60,14 +60,14 @@ Sinon il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo ap
     <TabItem value="win" label="Windows">
 
   Pour pouvoir installer la libraire Web3 et ses dépendances il d'abord nous falloir installer [Visual Studio](https://visualstudio.microsoft.com/fr/downloads/)
-  ![Installer Visual Studio](./VSInstallWindows.png)
+  ![Installer Visual Studio](/img/dev/beginners/VSInstallWindows.png)
 
   Une fois fait sélectionnez "Desktop development with C++" et cliquez sur "Install"
-  ![Installer Visual Studio](./VSInstallC++Windows.png)
+  ![Installer Visual Studio](/img/dev/beginners/VSInstallC++Windows.png)
 
   Une fois ça fait ouvrez VSCode et ouvrez un nouveau terminal et tapez ```pip3 install web3```
-  ![Ouvrir un terminal](./OpenTerminalVSCode.png)
-  ![Installer Web3](./PipInstallWindows.png)
+  ![Ouvrir un terminal](/img/dev/beginners/OpenTerminalVSCode.png)
+  ![Installer Web3](/img/dev/beginners/PipInstallWindows.png)
 
   </TabItem>
   <TabItem value="debian" label="Linux">
@@ -117,7 +117,7 @@ Résultat : ```Balance : 355259566500540782934```
 
 On notera que la balance renvoyée comprend les 18 décimales de précision de l'AVAX
 
-[Lien vers le script](./Web3-basics.py)
+<!-- [Lien vers le script](./Web3-basics.py) -->
 
   </TabItem>
   <TabItem value="js" label="Javascript">TODO</TabItem>
