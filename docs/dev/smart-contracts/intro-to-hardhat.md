@@ -206,10 +206,10 @@ Un autre vous permet de voir le [code coverage](https://www.npmjs.com/package/so
 
 ## Tests
 
-Hardhat facilite grandement le testage de vos smart contracts et si vous avez déjà utilisé Mocha pour un projet "web2" vous ne serez pas trop
+Hardhat facilite grandement le testage de vos smart contracts et si vous avez déjà utilisé [Mocha](https://mochajs.org/) pour un projet "web2" vous ne serez pas trop
 dépaysés.
 
-Voici un aperçu de ce à quoi ressemble un test de smart contract avec Hardhat:
+Voici un aperçu d'un test de smart contract avec Hardhat:
 
 ```typescript
 const { expect } = require("chai");
