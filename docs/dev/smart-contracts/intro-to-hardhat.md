@@ -143,7 +143,9 @@ AVAILABLE TASKS:
 To get help for a specific task run: npx hardhat help [task]
 ```
 
-# Tasks / Scripts
+# Tasks
+
+Lorsque vous lancez une commande depuis le runner, vous utilisez une task.
 
 Dans la section précédente nous avons vu qu'avec le CLI on peut lancer l'exécution de tasks. Celles-ci peuvent être
 celles par défaut d'Hardhat telles que `test` , `compile` mais aussi des tasks que vous aurez défini vous-même.
@@ -194,8 +196,12 @@ Je lance l'exécution de cette task via `npx hardhat run check_price`
 
 ## Plugins
 
-Comme mentionné plus haut, une des forces d'Hardhat est sa modularité et extensibilité.
-Il existe des plugins permettant de [vérifier facilement vos smart contracts sur etherscan](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
+Comme mentionné plus haut, une des forces d'Hardhat est sa modularité et son extensibilité.
+Les plugins sont utilisés pour intégrer à Hardhat les possibilités d'autres librairies.
+
+Il existe quelques plugins "officiels" et d'autres fournit par la communauté.
+
+Certain permettent de [vérifier facilement vos smart contracts sur etherscan](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
 Un autre vous permet de voir le [code coverage](https://www.npmjs.com/package/solidity-coverage) actuel de votre code Solidity.
 
 ## Sources et liens
