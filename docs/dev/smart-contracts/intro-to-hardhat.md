@@ -204,8 +204,34 @@ Il existe quelques plugins "officiels" et d'autres fournit par la communauté.
 Certain permettent de [vérifier facilement vos smart contracts sur etherscan](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
 Un autre vous permet de voir le [code coverage](https://www.npmjs.com/package/solidity-coverage) actuel de votre code Solidity.
 
+## Tests
+
+Hardhat facilite grandement le testage de vos smart contracts et si vous avez déjà utilisé Mocha pour un projet "web2" vous ne serez pas trop
+dépaysés.
+
+Voici un aperçu de ce à quoi ressemble un test de smart contract avec Hardhat:
+
+```typescript
+const { expect } = require("chai");
+
+describe("Token contract", function () {
+  it("Deployment should assign the total supply of tokens to the owner", async function () {
+    const [owner] = await ethers.getSigners();
+
+    const Token = await ethers.getContractFactory("Token");
+
+    const hardhatToken = await Token.deploy();
+
+    const ownerBalance = await hardhatToken.balanceOf(owner.address);
+    expect(await hardhatToken.totalSupply()).to.equal(ownerBalance);
+  });
+});
+```
+
 ## Sources et liens
 
 - https://hardhat.org/plugins/nomiclabs-hardhat-web3.html
+- https://hardhat.org/tutorial/
+- https://docs.avax.network/build/tutorials/tutorials-contest/hardhat-fork/
 - https://moralis.io/hardhat-explained-what-is-hardhat/
 - https://dev.to/yakult/a-concise-hardhat-tutorial-part-1-7eo
