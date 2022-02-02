@@ -1,7 +1,7 @@
 # Introduction à Hardhat
 
-Dans ce tutoriel, nous allons introduire **[Hardhat](https://hardhat.org/)** et passer en revue ses principales
-fonctionnalités. Elles feront l'objet d'un article plus détaillé dans le futur.
+Dans cet article, nous allons introduire **[Hardhat](https://hardhat.org/)** et passer en revue ses principales
+fonctionnalités. Elles feront l'objet d'articles/tutoriels plus détaillés dans le futur.
 
 ## Hardhat ?
 
@@ -15,7 +15,7 @@ que :
 - tests
 - débogage de votre smart contract
 
-De plus Hardhat amène sa propre version modifiée de l'EVM que vous pouvez utiliser lors de vos phases de tests. Cette
+Hardhat amène sa propre version modifiée de l'EVM que vous pouvez utiliser lors de vos phases de tests. Cette
 EVM modifiée rajoute des aides utiles vous permettant de tester plus efficacement votre code.
 
 ## Alternatives
@@ -27,11 +27,10 @@ qui possède des fonctionnalités assez semblables.
 **[Brownie](https://eth-brownie.readthedocs.io/en/stable/)** est un outil écrit en python qui possède des capacités
 similaires à Truffle. Si vous êtes plus à l'aise avec python alors cet outil est probablement un bon choix pour vous.
 
-Il y a aussi **[Foundry](https://mirror.xyz/sha.eth/6Mn3HjrqKLhHzu2balLPv4SqE5a-oEESl4ycpRkWFsc)**
-qui est un nouveau venu (que je n'ai personnellement pas eu le temps de tester, je pense couvrir ça dans un prochain
-tutoriel). Il promet une plus
+Il y a aussi **[Foundry](https://mirror.xyz/sha.eth/6Mn3HjrqKLhHzu2balLPv4SqE5a-oEESl4ycpRkWFsc)** un nouveau venu sur la scène des outils de 
+développement web3. Il promet une plus
 grande [rapidité d'exécution des tests](https://www.paradigm.xyz/2021/12/introducing-the-foundry-ethereum-development-toolbox/#You_should_be_writing_your_tests_in_Solidity)
-. Ceci est surement dû au fait que contrairement à hardhat ou truffle, qui sont écrit à l'aide de Javascript, Foundry
+. Ceci est surement dû au fait que contrairement à Hardhat ou truffle, qui sont écrit à l'aide de Javascript, Foundry
 utilise Rust.
 
 Un dernier outil concurrent à Hardhat : **[dApp.tools](https://dapp.tools/)**. 
@@ -42,12 +41,13 @@ On fera peut-être une série d'articles allant plus en profondeur sur ces outil
 
 ## Forces
 
-Globalement, Hardhat est plus facile d'utilisation et la possibilité de faire tourner ses tests en utilisant une copie
-de l'état d'une blockchain, à un certain block, est très puissante. Il est aussi plus rapide lors de l'exécution
+Globalement, Hardhat est - à mon sens - plus facile d'utilisation. La possibilité de faire tourner ses tests en utilisant une copie
+de l'état d'une blockchain, à un certain block, est très puissante. Permettant d'effectuer ses tests de manière déterministe avec un
+temps de mise en place moindre. Il est aussi plus rapide lors de l'exécution
 des tests que Truffle, cela peut vous faire gagner pas mal de temps. 
 
 > À noter que Foundry met en avant le fait qu'il soit
-plus rapide qu'Hardhat sur ce point.
+[plus rapide]((https://www.paradigm.xyz/2021/12/introducing-the-foundry-ethereum-development-toolbox/#You_should_be_writing_your_tests_in_Solidity)) qu'Hardhat sur ce point.
 
 Le système de plugins est très intéressant et permet d'étendre les fonctionnalités d'Hardhat. Par exemple, il existe un
 plugin qui calcul le cout de chaque transaction effectué lors de vos tests. Un autre vous permettra d'automatiquement
