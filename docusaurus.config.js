@@ -101,6 +101,12 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [
+      [
+        '@docusaurus/plugin-client-redirects',
+        { redirects: [ {to: '/', from: '/home', }]},
+      ],
+    ],
 };
 
 module.exports = config;
