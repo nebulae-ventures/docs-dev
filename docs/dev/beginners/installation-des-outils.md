@@ -6,17 +6,17 @@ import TabItem from '@theme/TabItem';
 Afin de pouvoir dévlopper sur Avalanche voici une liste des outils très utiles si ce n'est indispensables et comment les installer :
 
 - VSCode (Visual Studio Code)
-- Python ou Javascript
+- Python ou Node.js (Javascript)
 - Librairie Web3 pour le language choisi
 
 ## Installer VSCode
 
-Pour pouvoir coder n'importe quel éditeur de texte peut convenir mais certains possèdent des outils qui facilitent grandement la vie tel que [Visual Studio Code](https://code.visualstudio.com/)
+Pour pouvoir coder n'importe quel éditeur de texte peut convenir mais certains possèdent des outils qui facilitent grandement la vie tel que [Visual Studio Code](https://code.visualstudio.com/) ou l'équivalent de votre choix.
 
-Après avoir choisi la version correspondante à votre système d'exploitation
-![Télécharge VSCode](/img/dev/beginners/VSCodeInstall.png)
+<!-- Après avoir choisi la version correspondante à votre système d'exploitation
+![Télécharge VSCode](/img/dev/beginners/VSCodeInstall.png) -->
 
-<Tabs groupId="operating-systems">
+<!-- <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
 
 ![Installer VSCode](/img/dev/beginners/VSCodeInstallWindows.png)
@@ -29,14 +29,22 @@ Il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo dpkg -i 
 ![Installer VSCode](/img/dev/beginners/VSCodeInstallDebian.png)
 
   </TabItem>
-</Tabs>
+</Tabs> -->
 
-## Installer l'interprêteur Python
+## Python ou Node.js ?
+
+Il existe de nombreux langages de programmation, pour des questions de simplicité nous vous proposerons d'utiliser avec nous le [Python](https://www.python.org) et le [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript) (via [Node.js](https://nodejs.org/)).
+
+Javacript et Python sont des langages de programmation simple, cependant nous vous conseillons d'apprendres les bases algorithmiques pour une meilleure compréhension. Il existe de nombreux cours gratuits sur Internet tel que [OpenClassRoom](https://openclassrooms.com).
+
+Pour chaque langage nous vous proposons un guide succinct d'installation sur Windows et Linux :
+
+### Python
 
 <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
 
-Taper "Python" dans le Microsoft Store et installer la meilleure version disponible *(ici 3.9)*
+Recherchez "Python" dans le Microsoft Store et installez la dernière version disponible *(ici 3.9)*
 ![Installer VSCode](/img/dev/beginners/PythonInstallWindows.png)
 
   </TabItem>
@@ -49,9 +57,45 @@ Sinon il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo ap
   </TabItem>
 </Tabs>
 
-## Installer Javascript
+### Javascript
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+
+Téléchargez la dernière version de Node.js disponible (LTS) sur [ce site](https://nodejs.org/) et installez la.
+
+Pour vérifier votre installation vous pouvez ouvrir un terminal de commande (cmd) et tapez les commandes suivantes :
+```bash
+node -v
+#v16.13.2
+```
+```bash
+npm -v
+#8.4.1
+```
+  </TabItem>
+  <TabItem value="debian" label="Linux">
+
+Il exsite de nombreuses façons d'installer Node.js sur Linux. Pour le tutoriel nous utiliserons la solution snapd :
+```bash
+sudo snap install node --classic
+```
+
+Pour vérifier votre installation vous pouvez ouvrir un terminal de commande et tapez les commandes suivantes :
+```bash
+node -v
+#v16.13.2
+```
+```bash
+npm -v
+#8.1.2
+```
+  </TabItem>
+</Tabs>
 
 ## Installer la librairie Web3
+
+_Expliquer web3_
 
 <Tabs groupId="language">
   <TabItem value="python" label="Python">
@@ -84,10 +128,28 @@ Sinon il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo ap
   Et voilà plus qu'à tester tout ça !
 
   </TabItem>
-  <TabItem value="js" label="Javascript">TODO</TabItem>
+  <TabItem value="js" label="Javascript">
+  
+ Voici les étapes à suivre pour créer un projet Node.js avec VSCode :
+
+- Ouvrez VSCode et faites Ficher - Ouvrir un dossier
+- Créez un dossier dans l'explorateur de fichier (par ex: tutoWeb3 (**sans espace**)) et selectionnez le
+- Créez un fichier appelé **index.js**, ce sera le fichier principal de votre programme
+- Ouvrez un terminal dans VSCode (onglet Terminal en haut) et tapez ```npm init```, appuyez sur Entrée pour chaque demande
+- Installez la librairie web3 avec cette commande : ```npm install ethers```
+
+Vous devriez avoir un résultat semblable à celui-ci :
+
+![projet de base VSCode](/img/dev/beginners/projetBaseNodeJS.png)
+
+  </TabItem>
 </Tabs>
 
-## Exemple d'utilisation de Web3
+## Place au code !
+
+Vous avez désormais les outils de base en main pour devenir un expert web3 ! 
+
+<!-- ## Exemple d'utilisation de Web3
 
 <Tabs groupId="language">
   <TabItem value="python" label="Python">
@@ -117,8 +179,8 @@ Résultat : ```Balance : 355259566500540782934```
 
 On notera que la balance renvoyée comprend les 18 décimales de précision de l'AVAX
 
-<!-- [Lien vers le script](./Web3-basics.py) -->
+[Lien vers le script](./Web3-basics.py)
 
   </TabItem>
   <TabItem value="js" label="Javascript">TODO</TabItem>
-</Tabs>
+</Tabs> -->
