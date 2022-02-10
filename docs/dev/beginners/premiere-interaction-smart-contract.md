@@ -1,5 +1,7 @@
 # Première interaction avec un smart contract
 
+**Nous vous conseillons de lire le glossaire disponible sur [cette page](/glossaire) pour une meilleure compréhension des termes techniques.**
+
 Nous allons maintenant voir comment interagir avec des smart contracts et effectuer de vraies transactions !
 
 D'abord qu'est-ce qu'un SC (Smart Contract) ?

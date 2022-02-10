@@ -29,7 +29,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Débutant',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               type: 'doc',

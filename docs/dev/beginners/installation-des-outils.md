@@ -3,6 +3,8 @@ import TabItem from '@theme/TabItem';
 
 # Les outils de base pour dévlopper avec web3 sur Avalanche
 
+**Nous vous conseillons de lire le glossaire disponible sur [cette page](/glossaire) pour une meilleure compréhension des termes techniques.**
+
 Afin de pouvoir dévlopper sur Avalanche voici une liste des outils très utiles si ce n'est indispensables et comment les installer :
 
 - VSCode (Visual Studio Code)
