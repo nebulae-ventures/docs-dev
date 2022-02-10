@@ -1,6 +1,6 @@
-# Première interraction avec un smart contract
+# Première interaction avec un smart contract
 
-Nous allons maintenant voir comment interragir avec des smart contracts et effectuer de vraies transactions !
+Nous allons maintenant voir comment interagir avec des smart contracts et effectuer de vraies transactions !
 
 D'abord qu'est-ce qu'un SC (Smart Contract) ?
 TODO
@@ -39,7 +39,7 @@ routerContract = w3.eth.contract(address="0x60aE616a2155Ee3d9A68541Ba45448623109
 Et voilà notre 1er contrat défini ! Voyons maintenant comment interragir avec !
 Il existe 2 types de fonctions dans un SC :
 
-- les **view function** qui ne changent pas l'état de la Blockchain et ne nécessitent donc pas de transaction : ce sont des fonction qui renvoient juste une ou plusieurs valeures
+- les **view functions** qui ne changent pas l'état de la Blockchain et ne nécessitent donc pas de transaction : ce sont des fonctions qui renvoient juste une ou plusieurs valeurs
 - les **fonctions classiques** qui modifient l'état de l'état et nécessitent donc une transaction et de payer des frais
 
 ```python
@@ -59,7 +59,7 @@ Pour ça nous allons appeler la fonction swapExactAVAXForTokens
 #Vous noterez que le mot clef derrière le nom de la fonction 
 #Pour exécuter une transaction est différent : buildTransaction
 tx = routerContract.functions.swapExactAVAXForTokens(
-    minimumTokensOut,  #Nombre de tokens qu'on veut au minimum (si on reçoit moins la tx revert)
+    minimumTokensOut,  #Nombre de tokens que l'on veut au minimum (si on reçoit moins la tx revert)
     path,              #Chemin emprunté pour faire le swap (ici seulement WAVAX->USDT.e)
     account,           #Quelle adresse doit recevoir les tokens
     timestamp          #Timestamp jusqu'auquel notre tx est valide
