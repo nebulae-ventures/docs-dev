@@ -116,11 +116,7 @@ _Expliquer web3_
   </TabItem>
   <TabItem value="debian" label="Linux">
 
-  Python devrait déjà être installé sur votre machine : vous pouvez tester en tapant ```python3 --version``` dans un terminal ce qui devrait renvoyer quelque chose comme ```Python 3.9.2```  
-  Sinon il suffit d'ouvrir un terminal et d'exécuter cette commande  : ```sudo apt-get install python3```  
-  *(ou d'exécuter cette commande en root si pas sous Ubuntu)*
-
-  Dans un terminal taper la commande ```pip3 install web3```
+Dans un terminal taper la commande ```pip3 install web3```
 
   </TabItem>
   </Tabs>
