@@ -8,13 +8,83 @@ import TabItem from '@theme/TabItem';
 Nous allons maintenant voir comment interagir avec des smart contracts et effectuer de vraies transactions !
 
 D'abord qu'est-ce qu'un SC (Smart Contract) ?
-TODO
+**TODO**
+
+## Affichez votre balance d'AVAX
+
+<details>
+    <summary>Afficher le code</summary>
+      <div>
+      <Tabs groupId="language">
+  <TabItem value="python" label="Python">
+
+On peut maintenant passer aux choses sérieuses :
+Pour commencer on va avoir besoin d'importer la librairie Web3 :
+
+```python
+from web3 import Web3
+```
+
+Puis on l'initialise avec le rpc de l'api officielle :
+
+```python
+rpc = "https://api.avax.network/ext/bc/C/rpc"
+w3 = Web3(Web3.HTTPProvider(rpc))
+```
+
+Maintenant essayons quelque chose de simple comme regarder la balance (nombre d'AVAX) d'une adresse :
+
+```python
+monAddresse = w3.toChecksumAddress("0xC41BA3190D043e2Ef434AC23287D9Ba68C58106a")
+balance = w3.eth.get_balance(monAddresse)
+print("Balance :",balance)
+```
+Résultat : ```Balance : 355259566500540782934```
+
+On notera que la balance renvoyée comprend les 18 décimales de précision de l'AVAX
+
+ </TabItem>
+  <TabItem value="js" label="Javascript">
+
+Dans votre fichier _index.js_, ajoutez cette ligne pour importer la libraire web3 : 
+```javascript
+const ethers = require("ethers")
+```
+
+Connectez-vous au réseau Avalanche :
+```javascript
+const provider = new ethers.providers.JsonRpcProvider('https://api.avax-test.network/ext/bc/C/rpc');
+```
+
+Créez une fonction **main** qui contiendra votre code :
+```javascript
+const main = async () => {
+    const balance = await provider.getBalance('0xC41BA3190D043e2Ef434AC23287D9Ba68C58106a');
+    console.log(balance);
+}
+```
+Vous remarquerez que la balance n'est pas dans un format humainement lisible, formatons le en changeant cette ligne :
+```javascript
+console.log("Balance:", ethers.utils.formatEther(balance) + " AVAX");
+```
+Résultat : ```Balance: 91.119468275 AVAX```
+
+</TabItem>
+</Tabs>
+</div>
+</details>
+
+
+## Echanger des AVAX contre des USDT.e
 
 Nous allons effectuer un swap sur un DEX (ici TraderJoe)
 Pour cela nous avons besoin de reprendre notre base de code vu précédemment pour définir notre instance web3
 
-<Tabs groupId="language">
-  <TabItem value="python" label="Python">
+<details>
+    <summary>Afficher le code</summary>
+      <div>
+        <Tabs groupId="language">
+            <TabItem value="python" label="Python">
 
 ```python
 from web3 import Web3
@@ -213,6 +283,8 @@ On peut maintenant envoyer la transaction au réseau !
 node index.js
 ```
 ![Exemple simple swap](/img/dev/beginners/sendTransactionJS.png)
-  
-  </TabItem>
+
+</TabItem>
 </Tabs>
+</div>
+</details>

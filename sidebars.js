@@ -63,6 +63,11 @@ module.exports = {
               type: 'doc',
               id: 'dev/smart-contracts/outils-de-base',
             },
+            {
+              type: 'doc',
+              label: 'Introduction à Hardhat',
+              id: 'dev/smart-contracts/introduction-a-hardhat',
+            },
           ]
         },
       ],
