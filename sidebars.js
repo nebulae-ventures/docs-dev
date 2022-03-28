@@ -80,6 +80,14 @@ module.exports = {
           type: 'doc',
           id: 'concepts/evm',
         },
+        {
+          type: 'doc',
+          id: 'concepts/sandwich',
+        },
+        {
+          type: 'doc',
+          id: 'concepts/sandwich-example',
+        },
       ],
     },
   ],
