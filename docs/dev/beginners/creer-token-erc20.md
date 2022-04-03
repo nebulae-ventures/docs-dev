@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 **Nous vous conseillons de lire le glossaire disponible sur [cette page](/glossaire) pour une meilleure compréhension des termes techniques.**
 
-Nous vous invitons à créer votre token sur le [testnet Fuji](/dev/ressources/rpc).
+Nous vous invitons à créer votre token sur le [testnet Fuji](/dev/ressources/rpc) si vous voulez faire des tests et gardez vos précieux AVAX.
 
 ## Création du token ERC20
 
@@ -53,7 +53,7 @@ Le contrat sur l'explorer snowtrace :
 
 - Choissiez un DEX (TraderJoe, Pangolin, etc)
 - Créez une pool de liquidité en séléctionnant AVAX et votre token (vous devrez l'importer manuellement avec l'adresse du contrat)
-- Séléctionnez la quantité pour les deux tokens de votre choix
+- Séléctionnez la quantité pour les deux tokens de votre choix (généralement AVAX - votre ERC20)
 - Approuvez votre token et cliquez sur **Supply**
 
 ![traderjoe](/img/dev/beginners/erc20/traderjoe.png)
