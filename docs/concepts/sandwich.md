@@ -4,7 +4,7 @@
 
 Un sandwich est le fait d'entourer une transaction par 2 autres.
 
-Mais à quoi cela pourrait-il servir me direz vous, cela permet de modifier l'état de la blockchain avant la transaction et de tirer parti de cette modification inatendue pour l'émetter de cette transaction.
+Mais à quoi cela pourrait-il servir me direz vous, cela permet de modifier l'état de la blockchain avant la transaction et de tirer parti de cette modification inatendue pour l'émetteur de cette transaction.
 
 ## Exemple
 
