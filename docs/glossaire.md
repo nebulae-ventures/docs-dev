@@ -13,10 +13,11 @@
 - **Tx** : Transaction
 - **Gwei** : unité de mesure égale à 10^9 wei souvent utilisée pour parler du prix du gas [*plus d'infos*](https://support.mycrypto.com/general-knowledge/ethereum-blockchain/what-are-the-different-units-used-in-ethereum/)
 - **Wei** : unité de mesure "de base" correspondant à 10^-18 AVAX [*plus d'infos*](https://support.mycrypto.com/general-knowledge/ethereum-blockchain/what-are-the-different-units-used-in-ethereum/)
-- **MEV** : Acronyme de Miner Extractable Value : C'estl'extraction de valeur des utilisateurs d'Ethereum en réordonnant, en insérant et en censurant les transactions dans les blocs, sur Avalanche de par la nature du protocole (PoS) et du consensus c'est un peu différent mais il existe quand même de la valeur extractible (Arbitrage, Backrunning et surement bien d'autres pas encore exploités)
+- **Mempool** : La mempool représente la zone d'attente des transactions on y retrouve toutes les transactions en attentes intégrées dans un bloc
+- **MEV** : Acronyme de Miner Extractable Value : C'est l'extraction de valeur des utilisateurs d'Ethereum en réordonnant, en insérant et en censurant les transactions dans les blocs, sur Avalanche de par la nature du protocole (PoS) et du consensus c'est un peu différent mais il existe quand même de la valeur extractible (Arbitrage, Backrunning et surement bien d'autres pas encore exploités)
 - **Keccak** : Fonction de hachage cryptographique utilisé dans pas mal d'endroits de l'EVM
 - **Bridge** : Protocole permettant à différentes blockchains de communiquer (par exemple transférer des tokens de l'une à l'autre)
-- **NFT** : Non Fungible Tokens 
+- **NFT** : Non Fungible Tokens
 - **ERC-20** : Norme standart de Smart Contract pour les jetons fongibles sur Ethereum
 - **ERC-721** : Norme standart de Smart Contract pour les jetons non fongibles (NFT) sur Ethereum
 
