@@ -7,8 +7,8 @@ import TabItem from '@theme/TabItem';
 
 Nous allons maintenant voir comment interagir avec des smart contracts et effectuer de vraies transactions !
 
-D'abord qu'est-ce qu'un SC (Smart Contract) ?
-**TODO**
+<!-- D'abord qu'est-ce qu'un SC (Smart Contract) ?
+**TODO** -->
 
 ## Affichez votre balance d'AVAX
 
@@ -39,41 +39,51 @@ monAddresse = w3.toChecksumAddress("0xC41BA3190D043e2Ef434AC23287D9Ba68C58106a")
 balance = w3.eth.get_balance(monAddresse)
 print("Balance :",balance)
 ```
-Résultat : ```Balance : 355259566500540782934```
+
+Résultat : `Balance : 355259566500540782934`
 
 On notera que la balance renvoyée comprend les 18 décimales de précision de l'AVAX
 
  </TabItem>
   <TabItem value="js" label="Javascript">
 
-Dans votre fichier _index.js_, ajoutez cette ligne pour importer la libraire web3 : 
+Dans votre fichier _index.js_, ajoutez cette ligne pour importer la libraire web3 :
+
 ```javascript
-const ethers = require("ethers")
+const ethers = require("ethers");
 ```
 
 Connectez-vous au réseau Avalanche :
+
 ```javascript
-const provider = new ethers.providers.JsonRpcProvider('https://api.avax-test.network/ext/bc/C/rpc');
+const provider = new ethers.providers.JsonRpcProvider(
+  "https://api.avax-test.network/ext/bc/C/rpc"
+);
 ```
 
 Créez une fonction **main** qui contiendra votre code :
+
 ```javascript
 const main = async () => {
-    const balance = await provider.getBalance('0xC41BA3190D043e2Ef434AC23287D9Ba68C58106a');
-    console.log(balance);
-}
+  const balance = await provider.getBalance(
+    "0xC41BA3190D043e2Ef434AC23287D9Ba68C58106a"
+  );
+  console.log(balance);
+};
 ```
+
 Vous remarquerez que la balance n'est pas dans un format humainement lisible, formatons le en changeant cette ligne :
+
 ```javascript
 console.log("Balance:", ethers.utils.formatEther(balance) + " AVAX");
 ```
-Résultat : ```Balance: 91.119468275 AVAX```
+
+Résultat : `Balance: 91.119468275 AVAX`
 
 </TabItem>
 </Tabs>
 </div>
 </details>
-
 
 ## Echanger des AVAX contre des USDT.e
 
@@ -134,7 +144,7 @@ Sauf que nous voulons effectuer un swap et donc exécuter une transaction, par e
 Pour ça nous allons appeler la fonction swapExactAVAXForTokens
 
 ```python
-#Vous noterez que le mot clef derrière le nom de la fonction 
+#Vous noterez que le mot clef derrière le nom de la fonction
 #Pour exécuter une transaction est différent : buildTransaction
 tx = routerContract.functions.swapExactAVAXForTokens(
     minimumTokensOut,  #Nombre de tokens que l'on veut au minimum (si on reçoit moins la tx revert)
@@ -177,7 +187,7 @@ Plus qu'à tester notre code et ...
 
 ![Exemple simple swap](/img/dev/beginners/ExampleTx.png)
 
-Et voilà notre tx est passée [*(vous pouvez la voir ici)*](https://snowtrace.io/tx/0xada54d756583576cedf77ad7faa8dea936905dd01ce6f2e5a27bf41bb59a5c69)
+Et voilà notre tx est passée [_(vous pouvez la voir ici)_](https://snowtrace.io/tx/0xada54d756583576cedf77ad7faa8dea936905dd01ce6f2e5a27bf41bb59a5c69)
 
 N'hésitez pas à essayer chez vous sur Fuji [(en changeant le rpc)](/dev/ressources/rpc).
 
@@ -185,26 +195,28 @@ N'hésitez pas à essayer chez vous sur Fuji [(en changeant le rpc)](/dev/ressou
   <TabItem value="js" label="Javascript">
 
 ```javascript
-const ethers = require("ethers")
+const ethers = require("ethers");
 
 const PRIVATE_KEY = "XXX";
-const provider = new ethers.providers.JsonRpcProvider('https://api.avax.network/ext/bc/C/rpc');
+const provider = new ethers.providers.JsonRpcProvider(
+  "https://api.avax.network/ext/bc/C/rpc"
+);
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 ```
 
 **Vous pouvez également mettre votre clef privée dans un fichier externe (que l'on nommera key.txt) :**
 
-Installez une libraire avec ```npm install fs``` qui vous permettra de lire et écrire des fichiers
+Installez une libraire avec `npm install fs` qui vous permettra de lire et écrire des fichiers
 
-Ajoutez la librairire dans votre programme (en haut de votre programme) : ```const fs = require("fs")```
+Ajoutez la librairire dans votre programme (en haut de votre programme) : `const fs = require("fs")`
 
-Puis changez la ligne suivante : ```const PRIVATE_KEY = fs.readFileSync('./key.txt', "utf-8");```
+Puis changez la ligne suivante : `const PRIVATE_KEY = fs.readFileSync('./key.txt', "utf-8");`
 
 Puis nous avons besoin de définir un objet représentant le contrat avec lequel on veut interragir (ici le routeur de TraderJoe) et pour cela nous avons besoin de son ABI [que nous pouvons trouver ici](https://snowtrace.io/address/0x60aE616a2155Ee3d9A68541Ba4544862310933d4#code)
 
 ![Copier l'ABI](/img/dev/beginners/ABIRouter.png)
 
-Copiez le ensuite dans un fichier séparé nommé *router.json*
+Copiez le ensuite dans un fichier séparé nommé _router.json_
 
 ![Copier l'ABI 2](/img/dev/beginners/ExampleABIRouter.png)
 
@@ -225,53 +237,57 @@ Il existe 2 types de fonctions dans un SC :
 - les **view functions** qui ne changent pas l'état de la Blockchain et ne nécessitent donc pas de transaction : ce sont des fonctions qui renvoient juste une ou plusieurs valeurs
 - les **fonctions classiques** qui modifient l'état de l'état et nécessitent donc une transaction et de payer des frais
 
-```javascript 
+```javascript
 // Exemple d'appel a une view function
-const main = async () => {    
-    const factoryAddress = await router.factory();
-    console.log(factoryAddress);
+const main = async () => {
+  const factoryAddress = await router.factory();
+  console.log(factoryAddress);
 
-    // la suite du code sera ici
-}
+  // la suite du code sera ici
+};
 
 main();
 ```
 
-Executez votre programme avec : ```node index.js```
+Executez votre programme avec : `node index.js`
 
 ![Exemple view function](/img/dev/beginners/viewFunctionJS.png)
 
 Et voici ce que renvoie cette fonction par exemple (l'adresse du contrat factory de TraderJoe ici)
 
 Sauf que nous voulons effectuer un swap et donc exécuter une transaction, par exemple nous allons swap 1 avax en USDT.e  
-Pour ça nous allons appeler la fonction swapExactAVAXForTokens qui prend en paramètre plus arguments : 
+Pour ça nous allons appeler la fonction swapExactAVAXForTokens qui prend en paramètre plus arguments :
+
 - amountOutMin : nombre de tokens que l'on veut au minimum (si on reçoit moins la tx revert)
 - path : chemin emprunté pour faire le swap (ici seulement WAVAX->USDT.e)
 - to : adresse qui reçoit les tokens
-- deadline : date (timestamp)jusqu'à laquelle notre transaction reste valide 
+- deadline : date (timestamp)jusqu'à laquelle notre transaction reste valide
 
 ```javascript
 // ...
 const amountIn = 0.01; // nombre d'AVAX que l'on veut échanger
 const amountOutMin = 0; // équivalent à 100% de slippage sur l'UI du DEX
-const path = ["0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7", "0xc7198437980c041c805A1EDcbA50c1Ce5db95118"]; // WAVAX, USDT.e
+const path = [
+  "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+  "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+]; // WAVAX, USDT.e
 const to = wallet.address;
 const deadline = Date.now() + 60 * 60 * 1000; // 1 heure
 
 const gasPrice = await provider.getGasPrice();
 // formatage de notre variable en Big Number
-const value = ethers.utils.parseUnits(amountIn.toString(), 'ether');
+const value = ethers.utils.parseUnits(amountIn.toString(), "ether");
 
 // appel de la fonction swapExactAVAXForTokens avec nos variables
 const tx = await router.swapExactAVAXForTokens(
-    amountOutMin,
-    path,
-    to,
-    deadline,
-    { value: value, gasLimit: 210000, gasPrice: gasPrice}
+  amountOutMin,
+  path,
+  to,
+  deadline,
+  { value: value, gasLimit: 210000, gasPrice: gasPrice }
 );
 
-console.log('transaction sent...')
+console.log("transaction sent...");
 const receipt = await tx.wait();
 console.log(receipt);
 console.log(receipt.transactionHash);
@@ -282,6 +298,7 @@ On peut maintenant envoyer la transaction au réseau !
 ```bash
 node index.js
 ```
+
 ![Exemple simple swap](/img/dev/beginners/sendTransactionJS.png)
 
 </TabItem>
