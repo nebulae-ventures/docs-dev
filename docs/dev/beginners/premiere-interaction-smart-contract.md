@@ -7,7 +7,6 @@ import TabItem from '@theme/TabItem';
 
 Nous allons maintenant voir comment interagir avec des smart contracts et effectuer de vraies transactions !
 
-
 <!-- D'abord qu'est-ce qu'un SC (Smart Contract) ?
 **TODO** -->
 
@@ -91,6 +90,12 @@ Résultat : `Balance: 91.119468275 AVAX`
 Nous allons effectuer un swap sur un DEX (ici TraderJoe)
 Pour cela nous avons besoin de reprendre notre base de code vu précédemment pour définir notre instance web3
 
+<details>
+    <summary>Afficher le code</summary>
+      <div>
+        <Tabs groupId="language">
+            <TabItem value="python" label="Python">
+
 ```python
 from web3 import Web3
 
@@ -139,7 +144,7 @@ Sauf que nous voulons effectuer un swap et donc exécuter une transaction, par e
 Pour ça nous allons appeler la fonction swapExactAVAXForTokens
 
 ```python
-#Vous noterez que le mot clef derrière le nom de la fonction 
+#Vous noterez que le mot clef derrière le nom de la fonction
 #Pour exécuter une transaction est différent : buildTransaction
 tx = routerContract.functions.swapExactAVAXForTokens(
     minimumTokensOut,  #Nombre de tokens que l'on veut au minimum (si on reçoit moins la tx revert)
@@ -181,7 +186,6 @@ print("Tx envoyé au réseau : https://snowtrace.io/tx/{}".format(txh))
 Plus qu'à tester notre code et ...
 
 ![Exemple simple swap](/img/dev/beginners/ExampleTx.png)
-
 
 Et voilà notre tx est passée [_(vous pouvez la voir ici)_](https://snowtrace.io/tx/0xada54d756583576cedf77ad7faa8dea936905dd01ce6f2e5a27bf41bb59a5c69)
 
