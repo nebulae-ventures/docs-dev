@@ -27,8 +27,8 @@ module.exports = {
           ],
         },
         {
-          type: "category",
-          label: "Débutant",
+          type: 'category',
+          label: 'Débutant',
           collapsed: false,
           items: [
             {
@@ -89,6 +89,10 @@ module.exports = {
         {
           type: "doc",
           id: "concepts/evm",
+        },
+        {
+          type: 'doc',
+          id: 'concepts/sandwich',
         },
       ],
     },
