@@ -1,35 +1,36 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nebulae Ventures Docs',
-  tagline: 'Dinosaurs are cool',
-  url: 'http://docs.nebulae.ventures',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'nebulae-ventures', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
+  title: "Nebulae Ventures Docs",
+  tagline: "Dinosaurs are cool",
+  url: "http://docs.nebulae.ventures",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "nebulae-ventures", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
+  deploymentBranch: "gh-pages",
   trailingSlash: false,
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "/",
+          // breadcrumbs: true,
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -38,58 +39,63 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/logo-white.png',
-      metadata: [{name: 'twitter:card', content: 'Bienvenue sur la documentation de Nebulae !'}],
+      image: "img/logo-white.png",
+      metadata: [
+        {
+          name: "twitter:card",
+          content: "Bienvenue sur la documentation de Nebulae !",
+        },
+      ],
       navbar: {
-        title: 'Nebulae Ventures Docs',
+        title: "Nebulae Ventures Docs",
         logo: {
-          alt: 'Nebulae Ventures Logo',
-          src: 'img/logo-black.png',
-          srcDark: 'img/logo-white.png',
+          alt: "Nebulae Ventures Logo",
+          src: "img/logo-black.png",
+          srcDark: "img/logo-white.png",
         },
         items: [
           {
-            href: 'http://nebulae.ventures/',
-            label: 'Nebulae Ventures',
-            position: 'right',
+            href: "http://nebulae.ventures/",
+            label: "Nebulae Ventures",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/',
+                label: "Tutorial",
+                to: "/",
               },
               {
-                label: 'Feedback',
-                href: 'https://1kl13nfpg5e.typeform.com/to/SoY1nOY6'
+                label: "Feedback",
+                href: "https://1kl13nfpg5e.typeform.com/to/SoY1nOY6",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/NebulaeVentures',
+                label: "Twitter",
+                href: "https://twitter.com/NebulaeVentures",
               },
               {
-                label: 'Newsletter',
-                to: 'https://nebulae.substack.com/',
+                label: "Newsletter",
+                to: "https://nebulae.substack.com/",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label : 'Linkedin',
-                to: 'https://www.linkedin.com/company/nebul%C3%A6/'
+                label: "Linkedin",
+                to: "https://www.linkedin.com/company/nebul%C3%A6/",
               },
             ],
           },
@@ -101,6 +107,12 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      { redirects: [{ to: "/", from: "/home" }] },
+    ],
+  ],
 };
 
 module.exports = config;
